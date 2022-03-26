@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package service3;
+
+// Interface exported by the server.
+service Service3 {
+  
+  rpc save_password(RequestMessage) returns (ResponseMessage) {}
+
+  rpc check_password(RequestMessage) returns (ResponseMessage) {}
+
+  rpc open_the_door(RequestMessage) returns (ResponseMessage) {}
+    
+}
+
+message RequestMessage {
+  string text = 1;  
+}
+
+message ResponseMessage {
+  string text = 1;
+}
